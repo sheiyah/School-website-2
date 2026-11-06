@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Values | Alashbal International School</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="values.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- SIDE ACCESSIBILITY TOOLBAR -->
+<aside class="a11y-side-bar">
+    <button id="a11yToggleBtn" class="a11y-side-toggle" aria-label="Toggle Accessibility Panel" title="Accessibility Panel">
+        <svg class="a11y-svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M12 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-1 5v4H8v2h3v9h2v-9h3v-2h-3V7h-2z"/>
+        </svg>
+    </button>
+    <div id="a11yPanel" class="a11y-slide-panel" hidden>
+        <div class="a11y-panel-header">
+            <h3>Accessibility Options</h3>
+            <button id="a11yCloseBtn" class="a11y-panel-close">&times;</button>
+        </div>
+        <div class="a11y-panel-body">
+            <div class="a11y-section">
+                <label for="textSizeSlider">Text Size</label>
+                <div class="slider-control">
+                    <span class="lbl-small">A</span>
+                    <input type="range" id="textSizeSlider" min="100" max="140" step="10" value="100">
+                    <span class="lbl-large">A</span>
+                </div>
+            </div>
+            <div class="a11y-section">
+                <label>Color Contrast</label>
+                <div class="toggle-row">
+                    <span>High Contrast</span>
+                    <label class="switch"><input type="checkbox" id="contrastToggle"><span class="slider round"></span></label>
+                </div>
+            </div>
+            <div class="a11y-section">
+                <div class="toggle-row">
+                    <span>Reduce Motion</span>
+                    <label class="switch"><input type="checkbox" id="motionToggle"><span class="slider round"></span></label>
+                </div>
+            </div>
+            <div class="a11y-section">
+                <label>Screen Reader Options</label>
+                <div class="toggle-row">
+                    <span>Enable Screen Reader</span>
+                    <label class="switch"><input type="checkbox" id="srToggle"><span class="slider round"></span></label>
+                </div>
+                <div class="voice-controls">
+                    <label for="speechSpeed">Adjust Speed</label>
+                    <input type="range" id="speechSpeed" min="0.5" max="1.5" step="0.25" value="1">
+                    <label for="voiceSelect" style="margin-top: 10px; display:block;">Voice Selection</label>
+                    <select id="voiceSelect" class="a11y-select"><option value="default">Default System Voice</option></select>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<header class="navbar">
+    <a class="brand" href="index.html">
+        <img src="logo.png" alt="Alashbal International School Logo">
+    </a>
+
+    <div class="nav-controls">
+        <button id="searchOpenBtn" class="control-btn search-btn" aria-label="Open website search" title="Search website">
+            <span data-en="Search" data-ar="بحث">Search</span>
+        </button>
+        <button id="themeToggle" class="control-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <button id="langToggle" class="control-btn lang-btn" aria-label="Toggle language">
+            العربية
+        </button>
+    </div>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu">
+        <div class="nav-dropdown">
+            <a href="about.html" class="active" data-en="About <span>⌄</span>" data-ar="عن المدرسة <span>⌄</span>">About <span>⌄</span></a>
+            <div class="dropdown-content">
+                <a href="about.html" data-en="Our School" data-ar="مدرستنا">Our School</a>
+                <a href="about.html#principal" data-en="Principal's Message" data-ar="رسالة المدير">Principal's Message</a>
+                <a href="mission.html" data-en="Mission &amp; Vision" data-ar="المهمة والرؤية">Mission &amp; Vision</a>
+                <a class="active" href="values.html" data-en="Our Values" data-ar="قيمنا">Our Values</a>
+                <a href="about.html#pledge" data-en="Anti-Bullying Pledge" data-ar="تعهد منع التنمر">Anti-Bullying Pledge</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <a href="Academics.html" data-en="Academics <span>⌄</span>" data-ar="الأكاديميات <span>⌄</span>">Academics <span>⌄</span></a>
+            <div class="dropdown-content">
+                <a href="Academics.html" data-en="Academics" data-ar="الأكاديميات">Academics</a>
+                <a href="curriculum.html" data-en="Cambridge Curriculum" data-ar="منهج كامبريدج">Cambridge Curriculum</a>
+                <a href="gallery.html" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
+            </div>
+        </div>
+        <a href="Admissions.html" data-en="Admissions" data-ar="القبول والتسجيل">Admissions</a>
+        <div class="nav-dropdown">
+            <a href="team.html" data-en="Our Team <span>⌄</span>" data-ar="فريقنا <span>⌄</span>">Our Team <span>⌄</span></a>
+            <div class="dropdown-content">
+                <a href="team.html" data-en="Leadership" data-ar="القيادة">Leadership</a>
+                <a href="administrators.html" data-en="Administrators" data-ar="الإداريون">Administrators</a>
+            </div>
+        </div>
+        <a href="parents.html" data-en="For Parents" data-ar="لأولياء الأمور">For Parents</a>
+        <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+        <a class="student-btn" href="studenthub.html" data-en="Student Hub" data-ar="بوابة الطلاب">Student Hub</a>
+    </nav>
+</header>
+
+<!-- SMART SEARCH MODAL -->
+<div id="searchModal" class="search-modal" role="dialog" aria-modal="true" aria-label="Smart Website Search" hidden>
+    <div class="search-modal-content">
+        <div class="search-header">
+            <input type="search" id="searchInput" placeholder="Search admissions, curriculum, events, policies..." aria-label="Search query input" autocomplete="off">
+            <button id="searchCloseBtn" class="search-close-btn" aria-label="Close search modal">&times;</button>
+        </div>
+        <div id="searchResults" class="search-results" aria-live="polite">
+            <p class="search-placeholder">Start typing to search across AIS pages...</p>
+        </div>
+    </div>
+</div>
+
+<main>
+<section class="page-hero">
+    <p class="eyebrow" data-en="WHAT WE BELIEVE" data-ar="ما نؤمن به">WHAT WE BELIEVE</p>
+    <h1 data-en="Our Values<br><em>& principles.</em>" data-ar="قيمنا<br><em>ومبادئنا.</em>">Our Values<br><em>& principles.</em></h1>
+</section>
+
+<!-- MAIN VALUES -->
+<section class="content-section">
+    <p class="kicker" data-en="01 / MAIN VALUES" data-ar="01 / القيم الرئيسية">01 / MAIN VALUES</p>
+    <h2 class="content-heading" data-en="Core pillars shaping our <em>community.</em>" data-ar="الركائز الأساسية التي تشكل <em>مجتمعنا.</em>">Core pillars shaping our <em>community.</em></h2>
+    
+    <div class="cards">
+        <article class="card">
+            <span class="card-number">01</span>
+            <h3 data-en="Accountability" data-ar="المساءلة">Accountability</h3>
+            <p data-en="At Alashbal International School, accountability is essential for building a trustworthy and reliable environment. This category emphasizes the importance of taking responsibility for actions and decisions." data-ar="في مدرسة الأشبال الدولية، تعتبر المساءلة ضرورية لبناء بيئة جديرة بالثقة وموثوقة. يؤكد هذا القسم على أهمية تحمل المسؤولية عن الأفعال والقرارات.">At Alashbal International School, accountability is essential for building a trustworthy and reliable environment. This category emphasizes the importance of taking responsibility for actions and decisions.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">02</span>
+            <h3 data-en="Innovation" data-ar="الابتكار">Innovation</h3>
+            <p data-en="Innovation is at the core of Alashbal International School’s approach to education, preparing students to adapt and thrive in a rapidly changing world. This category focuses on fostering creativity and adaptability." data-ar="الابتكار هو جوهر منهج مدرسة الأشبال الدولية في التعليم، مما يهيئ الطلاب للتكيف والازدهار في عالم يتغير بسرعة. يركز هذا القسم على تعزيز الإبداع والمرونة.">Innovation is at the core of Alashbal International School’s approach to education, preparing students to adapt and thrive in a rapidly changing world. This category focuses on fostering creativity and adaptability.</p>
+        </article>
+        <article class="card" style="grid-column: span 2;">
+            <span class="card-number">03</span>
+            <h3 data-en="Service" data-ar="الخدمة المجتمعية">Service</h3>
+            <p data-en="Service is a fundamental value at Alashbal International School, reflecting a commitment to making a positive impact on the community and the world. This category emphasizes empathy, teamwork, and global responsibility." data-ar="الخدمة هي قيمة أساسية في مدرسة الأشبال الدولية، مما يعكس الالتزام بإحداث تأثير إيجابي في المجتمع والعالم. يؤكد هذا القسم على التعاطف والعمل الجماعي والمسؤولية العالمية.">Service is a fundamental value at Alashbal International School, reflecting a commitment to making a positive impact on the community and the world. This category emphasizes empathy, teamwork, and global responsibility.</p>
+        </article>
+    </div>
+</section>
+
+<!-- MORE EDUCATIONAL VALUES -->
+<section class="content-section" style="background: rgba(217, 181, 157, 0.08);">
+    <p class="kicker" data-en="02 / EDUCATIONAL VALUES" data-ar="02 / القيم التربوية">02 / EDUCATIONAL VALUES</p>
+    <h2 class="content-heading" data-en="Principles that guide our <em>students daily.</em>" data-ar="المبادئ التي توجّه <em>طلابنا يومياً.</em>">Principles that guide our <em>students daily.</em></h2>
+
+    <div class="cards">
+        <article class="card">
+            <span class="card-number">01</span>
+            <h3 data-en="Honesty" data-ar="الصدق">Honesty</h3>
+            <p data-en="To tell the truth and uphold truthfulness in all actions and communications." data-ar="قول الصدق والالتزام بالحقيقة في جميع الأفعال والتواصل.">To tell the truth and uphold truthfulness in all actions and communications.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">02</span>
+            <h3 data-en="Respect" data-ar="الاحترام">Respect</h3>
+            <p data-en="Being considerate and honoring others, valuing diversity and personal boundaries." data-ar="الاهتمام بالآخرين وتوقيرهم، وتقدير التنوع والحدود الشخصية.">Being considerate and honoring others, valuing diversity and personal boundaries.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">03</span>
+            <h3 data-en="Social Responsibility" data-ar="المسؤولية الاجتماعية">Social Responsibility</h3>
+            <p data-en="Accountable for fulfilling one's civil duty and contributing positively to society." data-ar="التحلي بالمسؤولية لتأدية الواجب المدني والمساهمة بشكل إيجابي في المجتمع.">Accountable for fulfilling one's civil duty and contributing positively to society.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">04</span>
+            <h3 data-en="Gratitude" data-ar="الامتنان">Gratitude</h3>
+            <p data-en="The quality of being thankful and appreciating the blessings and efforts of others." data-ar="صفة الشكر وتقدير النعم وجهود الآخرين.">The quality of being thankful and appreciating the blessings and efforts of others.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">05</span>
+            <h3 data-en="Positivity" data-ar="الإيجابية">Positivity</h3>
+            <p data-en="The state of being positive, optimistic, and bringing constructive energy to challenges." data-ar="حالة التفاؤل والإيجابية وجلب الطاقة البناءة لمواجهة التحديات.">The state of being positive, optimistic, and bringing constructive energy to challenges.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">06</span>
+            <h3 data-en="Initiative" data-ar="المبادرة">Initiative</h3>
+            <p data-en="To take action and do things proactively without needing to be told." data-ar="اتخاذ الخطوات والقيام بالأمور بشكل استباقي دون الحاجة للتوجيه.">To take action and do things proactively without needing to be told.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">07</span>
+            <h3 data-en="Confidence" data-ar="الثقة">Confidence</h3>
+            <p data-en="Feeling secure of yourself, your character, and your capabilities." data-ar="الشعور بالأمان والثقة بالنفس وبقدراتك وشخصيتك.">Feeling secure of yourself, your character, and your capabilities.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">08</span>
+            <h3 data-en="Forgiveness" data-ar="التسامح">Forgiveness</h3>
+            <p data-en="The ability to let go of resentment and forgive mistakes graciously." data-ar="القدرة على التخلي عن الضغائن ومسامحة الأخطاء بلطف.">The ability to let go of resentment and forgive mistakes graciously.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">09</span>
+            <h3 data-en="Humility" data-ar="التواضع">Humility</h3>
+            <p data-en="Being humble, modest, and always open to learning from everyone." data-ar="التواضع وعدم التكبر والانفتاح الدائم على التعلم من الجميع.">Being humble, modest, and always open to learning from everyone.</p>
+        </article>
+        <article class="card">
+            <span class="card-number">10</span>
+            <h3 data-en="Integrity" data-ar="النزاهة">Integrity</h3>
+            <p data-en="Being honest and having strong moral principles that you refuse to compromise." data-ar="الصدق والامتلاك لمبادئ أخلاقية راسخة ترفض التنازل عنها.">Being honest and having strong moral principles that you refuse to compromise.</p>
+        </article>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div>
+        <strong data-en="ALASHBAL INTERNATIONAL SCHOOL" data-ar="مدرسة الأشبال الدولية">ALASHBAL INTERNATIONAL SCHOOL</strong>
+        <p data-en="Young Achievers of Today, Global Leaders of Tomorrow." data-ar="منجزو اليوم، قادة الغد العالميون.">Young Achievers of Today, Global Leaders of Tomorrow.</p>
+    </div>
+    <div>
+        <strong data-en="HOME OF THE CUBS" data-ar="مقر الأشبال">HOME OF THE CUBS</strong>
+        <p>© 2026 Alashbal International School</p>
+    </div>
+</footer>
+
+<script>
+const menu = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-menu");
+if(menu) {
+    menu.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", open);
+    });
+}
+document.querySelectorAll(".nav-dropdown > a").forEach(link => {
+    link.addEventListener("click", event => {
+        if (window.innerWidth <= 850) {
+            const dropdown = link.parentElement;
+            if (!dropdown.classList.contains("open")) {
+                event.preventDefault();
+                dropdown.classList.toggle("open");
+            }
+        }
+    });
+});
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle.querySelector(".theme-icon");
+const currentTheme = localStorage.getItem("theme") || "light";
+if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeIcon.textContent = "☀️";
+}
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    themeIcon.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+const langToggle = document.getElementById("langToggle");
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    langToggle.textContent = lang === "ar" ? "English" : "العربية";
+    document.querySelectorAll("[data-en][data-ar]").forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) el.innerHTML = text;
+    });
+    localStorage.setItem("lang", lang);
+}
+const currentLang = localStorage.getItem("lang") || "en";
+setLanguage(currentLang);
+langToggle.addEventListener("click", () => {
+    const newLang = document.documentElement.lang === "en" ? "ar" : "en";
+    setLanguage(newLang);
+});
+
+const a11yToggleBtn = document.getElementById("a11yToggleBtn");
+const a11yCloseBtn = document.getElementById("a11yCloseBtn");
+const a11yPanel = document.getElementById("a11yPanel");
+a11yToggleBtn.addEventListener("click", () => {
+    const open = a11yPanel.hidden;
+    a11yPanel.hidden = !open;
+    a11yPanel.classList.toggle("open", open);
+});
+a11yCloseBtn.addEventListener("click", () => {
+    a11yPanel.classList.remove("open");
+    a11yPanel.hidden = true;
+});
+document.getElementById("textSizeSlider").addEventListener("input", (e) => {
+    document.documentElement.style.fontSize = e.target.value + "%";
+});
+document.getElementById("contrastToggle").addEventListener("change", (e) => {
+    document.body.classList.toggle("high-contrast", e.target.checked);
+});
+document.getElementById("motionToggle").addEventListener("change", (e) => {
+    document.body.classList.toggle("reduce-motion", e.target.checked);
+});
+
+const srToggle = document.getElementById("srToggle");
+const voiceSelect = document.getElementById("voiceSelect");
+const speechSpeed = document.getElementById("speechSpeed");
+if ('speechSynthesis' in window) {
+    function loadVoices() {
+        const voices = window.speechSynthesis.getVoices();
+        voiceSelect.innerHTML = voices.map(v => `<option value="${v.name}">${v.name} (${v.lang})</option>`).join('');
+    }
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+function speakText(text) {
+    if (!srToggle.checked || !('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = parseFloat(speechSpeed.value);
+    const voices = window.speechSynthesis.getVoices();
+    const selectedVoice = voices.find(v => v.name === voiceSelect.value);
+    if (selectedVoice) utterance.voice = selectedVoice;
+    window.speechSynthesis.speak(utterance);
+}
+srToggle.addEventListener("change", (e) => {
+    if (e.target.checked && 'speechSynthesis' in window) {
+        speakText("Screen reader enabled. Click any paragraph or heading to read it.");
+    } else {
+        window.speechSynthesis.cancel();
+    }
+});
+document.addEventListener("click", (e) => {
+    if (!srToggle.checked) return;
+    const target = e.target.closest("p, h1, h2, h3, h4, h5, h6, span, a");
+    if (target && !target.closest(".a11y-slide-panel")) {
+        const textToRead = target.innerText.trim();
+        if (textToRead) speakText(textToRead);
+    }
+});
+
+const searchOpenBtn = document.getElementById("searchOpenBtn");
+const searchCloseBtn = document.getElementById("searchCloseBtn");
+const searchModal = document.getElementById("searchModal");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+const siteIndex = [
+    { title: "Our Values", url: "values.html", category: "About AIS", keywords: "values accountability innovation service honesty respect responsibility gratitude positivity initiative confidence forgiveness humility integrity" },
+    { title: "School Gallery", url: "gallery.html", category: "Academics", keywords: "gallery photos campus students events activities" },
+    { title: "Admissions & Entry Requirements", url: "Admissions.html", category: "Admissions", keywords: "apply application registration fees documents enrollment requirements" }
+];
+searchOpenBtn.addEventListener("click", () => { searchModal.hidden = false; searchModal.classList.add("open"); searchInput.focus(); });
+searchCloseBtn.addEventListener("click", () => { searchModal.classList.remove("open"); searchModal.hidden = true; });
+searchInput.addEventListener("input", () => {
+    const q = searchInput.value.toLowerCase().trim();
+    if (!q) { searchResults.innerHTML = '<p class="search-placeholder">Start typing to search across AIS pages...</p>'; return; }
+    const matches = siteIndex.filter(i => i.title.toLowerCase().includes(q) || i.keywords.includes(q));
+    if (!matches.length) { searchResults.innerHTML = '<p class="search-no-results">No pages found matching your search.</p>'; return; }
+    searchResults.innerHTML = matches.map(m => `<a href="${m.url}" class="search-result-item"><span class="search-result-cat">${m.category}</span><span class="search-result-title">${m.title}</span></a>`).join("");
+});
+</script>
+</body>
+</html>
