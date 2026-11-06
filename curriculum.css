@@ -1,0 +1,111 @@
+/* ================= CAMBRIDGE CURRICULUM PAGE STYLES ================= */
+
+.cambridge-logo {
+    width: 125px;
+    height: 58px;
+    object-fit: cover;
+    filter: brightness(0) invert(1);
+}
+
+.page-hero {
+    min-height: 440px;
+    background: #2b0c15 !important;
+    color: #ffffff !important;
+    padding: 100px 7% 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: #d9b59d !important;
+    font-weight: 700;
+}
+
+.page-hero h1 {
+    font: 500 clamp(3.5rem, 8vw, 7rem) / .95 "Playfair Display", serif;
+    margin-top: 14px;
+    color: #ffffff !important;
+}
+
+.page-hero h1 em {
+    font-style: italic;
+    color: #d9b59d !important;
+}
+
+/* ================= VISIBLE READABLE CARDS (WHITE TEXT FIX) ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #ffffff !important;
+    color: #251218 !important;
+    padding: 35px;
+    min-height: 250px;
+    border: 1px solid #e4dad5;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.card-number {
+    font-size: 11px;
+    color: #681d2c !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font: 600 24px/1.2 "Playfair Display", serif;
+    color: #3a0d18 !important;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #524749 !important;
+    line-height: 1.6;
+}
+
+.photo-section {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.campus-img-container {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.campus-img-zoomed {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 850px) {
+    .cards, .photo-section {
+        grid-template-columns: 1fr;
+    }
+}
