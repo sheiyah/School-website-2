@@ -1,0 +1,111 @@
+/* ================= GALLERY PAGE STYLES ================= */
+
+.page-hero {
+    min-height: 420px;
+    background: 
+        radial-gradient(circle at 80% 20%, rgba(217, 181, 157, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(104, 29, 44, 0.4) 0%, transparent 50%),
+        #2b0c15 !important;
+    color: #ffffff !important;
+    padding: 100px 7% 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: #d9b59d !important;
+    font-weight: 700;
+}
+
+.page-hero h1 {
+    font: 500 clamp(3.5rem, 8vw, 6.5rem)/.98 "Playfair Display", serif;
+    margin-top: 14px;
+    color: #ffffff !important;
+}
+
+.page-hero h1 em {
+    font-style: italic;
+    color: #d9b59d !important;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e4dad5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease;
+}
+
+body.dark-mode .gallery-card {
+    background: #1c0a10;
+    border-color: #381620;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+}
+
+.gallery-img-wrap {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #2b0c15;
+}
+
+.gallery-card.portrait .gallery-img-wrap {
+    height: 380px;
+}
+
+.gallery-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-card:hover .gallery-img-wrap img {
+    transform: scale(1.08);
+}
+
+.gallery-caption {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.caption-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    color: #681d2c;
+    margin-bottom: 8px;
+}
+
+body.dark-mode .caption-tag {
+    color: #d9b59d;
+}
+
+.gallery-caption h3 {
+    font: 600 18px/1.3 "Playfair Display", serif;
+    margin-bottom: 8px;
+}
+
+.gallery-caption p {
+    font-size: 12px;
+    color: #665d5e;
+}
