@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Alashbal International School</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="designn.css">
+    <link rel="stylesheet" href="Academics.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<aside class="a11y-side-bar">
+    <button id="a11yToggleBtn" class="a11y-side-toggle" aria-label="Toggle Accessibility Panel" title="Accessibility Panel">
+        <svg class="a11y-svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M12 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-1 5v4H8v2h3v9h2v-9h3v-2h-3V7h-2z"/>
+        </svg>
+    </button>
+    <div id="a11yPanel" class="a11y-slide-panel" hidden>
+        <div class="a11y-panel-header">
+            <h3>Accessibility Options</h3>
+            <button id="a11yCloseBtn" class="a11y-panel-close">&times;</button>
+        </div>
+        <div class="a11y-panel-body">
+            <div class="a11y-section">
+                <label for="textSizeSlider">Text Size</label>
+                <div class="slider-control">
+                    <span class="lbl-small">A</span>
+                    <input type="range" id="textSizeSlider" min="100" max="140" step="10" value="100">
+                    <span class="lbl-large">A</span>
+                </div>
+            </div>
+            <div class="a11y-section">
+                <label>Color Contrast</label>
+                <div class="toggle-row">
+                    <span>High Contrast</span>
+                    <label class="switch"><input type="checkbox" id="contrastToggle"><span class="slider round"></span></label>
+                </div>
+            </div>
+            <div class="a11y-section">
+                <div class="toggle-row">
+                    <span>Reduce Motion</span>
+                    <label class="switch"><input type="checkbox" id="motionToggle"><span class="slider round"></span></label>
+                </div>
+            </div>
+            <div class="a11y-section">
+                <label>Screen Reader Options</label>
+                <div class="toggle-row">
+                    <span>Enable Screen Reader</span>
+                    <label class="switch"><input type="checkbox" id="srToggle"><span class="slider round"></span></label>
+                </div>
+                <div class="voice-controls">
+                    <label for="speechSpeed">Adjust Speed</label>
+                    <input type="range" id="speechSpeed" min="0.5" max="1.5" step="0.25" value="1">
+                    <label for="voiceSelect" style="margin-top: 10px; display:block;">Voice Selection</label>
+                    <select id="voiceSelect" class="a11y-select"><option value="default">Default System Voice</option></select>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<header class="navbar">
+    <a class="brand" href="index.html">
+        <img src="logo.png" alt="Alashbal International School Logo">
+    </a>
+
+    <div class="nav-controls">
+        <button id="searchOpenBtn" class="control-btn search-btn" aria-label="Open website search" title="Search website">
+            <span data-en="Search" data-ar="بحث">Search</span>
+        </button>
+        <button id="themeToggle" class="control-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <button id="langToggle" class="control-btn lang-btn" aria-label="Toggle language">
+            العربية
+        </button>
+    </div>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu">
+        <div class="nav-dropdown">
+            <a href="about.html" data-en="About <span>⌄</span>" data-ar="عن المدرسة <span>⌄</span>">About <span>⌄</span></a>
+            <div class="dropdown-content">
+                <a href="about.html" data-en="Our School" data-ar="مدرستنا">Our School</a>
+                <a href="about.html#principal" data-en="Principal's Message" data-ar="رسالة المدير">Principal's Message</a>
+                <a href="values.html" data-en="Our Values" data-ar="قيمنا">Our Values</a>
+                <a href="about.html#pledge" data-en="Anti-Bullying Pledge" data-ar="تعهد منع التنمر">Anti-Bullying Pledge</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <a class="active" href="Academics.html" data-en="Academics <span>⌄</span>" data-ar="الأكاديميات <span>⌄</span>">Academics <span>⌄</span></a>
+            <div class="dropdown-content">
+                <a class="active" href="Academics.html" data-en="Academics" data-ar="الأكاديميات">Academics</a>
+                <a href="curriculum.html" data-en="Cambridge Curriculum" data-ar="منهج كامبريدج">Cambridge Curriculum</a>
+                <a href="gallery.html" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
+            </div>
+        </div>
+        <a href="Admissions.html" data-en="Admissions" data-ar="القبول والتسجيل">Admissions</a>
+        <div class="nav-dropdown">
+            <a href="team.html" data-en="Our Team <span>⌄</span>" data-ar="فريقنا <span>⌄</span>">Our Team <span>⌄</span></a>
+            <div class="dropdown-content">
+                <a href="team.html" data-en="Leadership" data-ar="القيادة">Leadership</a>
+                <a href="administrators.html" data-en="Administrators" data-ar="الإداريون">Administrators</a>
+            </div>
+        </div>
+        <a href="parents.html" data-en="For Parents" data-ar="لأولياء الأمور">For Parents</a>
+        <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+        <a class="student-btn" href="studenthub.html" data-en="Student Hub" data-ar="بوابة الطلاب">Student Hub</a>
+    </nav>
+</header>
+
+<div id="searchModal" class="search-modal" role="dialog" aria-modal="true" aria-label="Smart Website Search" hidden>
+    <div class="search-modal-content">
+        <div class="search-header">
+            <input type="search" id="searchInput" placeholder="Search admissions, curriculum, events, policies..." aria-label="Search query input" autocomplete="off">
+            <button id="searchCloseBtn" class="search-close-btn" aria-label="Close search modal">&times;</button>
+        </div>
+        <div id="searchResults" class="search-results" aria-live="polite">
+            <p class="search-placeholder">Start typing to search across AIS pages...</p>
+        </div>
+    </div>
+</div>
+
+<main>
+    <section class="page-hero">
+        <div class="hero-content">
+            <p class="eyebrow" data-en="ACADEMIC EXCELLENCE" data-ar="التميز الأكاديمي">ACADEMIC EXCELLENCE</p>
+            <h1 data-en="Shaping minds,<br><em>inspiring futures.</em>" data-ar="صناعة العقول،<br><em>إلهام المستقبل.</em>">Shaping minds,<br><em>inspiring futures.</em></h1>
+        </div>
+    </section>
+
+    <section class="content-section visual-bg-light">
+        <p class="kicker reveal-up" data-en="01 / ACADEMIC FRAMEWORK" data-ar="01 / الإطار الأكاديمي">01 / ACADEMIC FRAMEWORK</p>
+        <h2 class="content-heading reveal-up" data-en="Rigorous learning tailored for <em>individual growth.</em>" data-ar="تعلم دقيق مصمم خصيصاً <em>للنمو الفردي.</em>">Rigorous learning tailored for <em>individual growth.</em></h2>
+        <div class="photo-section">
+            <div class="campus-img-container reveal-left">
+                <img class="campus-img-zoomed" src="boyslib.png" alt="Academics at Alashbal International School">
+            </div>
+            <div class="body-copy reveal-right">
+                <p data-en="At Alashbal International School, our academic framework is built upon international standards that foster intellectual curiosity, analytical precision, and lifelong learning habits." data-ar="في مدرسة الأشبال الدولية، بني إطارنا الأكاديمي على المعايير الدولية التي تعزز الفضول الفكري والدقة التحليلية وعادات التعلم مدى الحياة.">
+                    At Alashbal International School, our academic framework is built upon international standards that foster intellectual curiosity, analytical precision, and lifelong learning habits.
+                </p>
+                <p data-en="We empower students to explore complex concepts through collaborative inquiry, practical experimentation, and dedicated faculty mentorship." data-ar="نحن نمكن الطلاب من استكشاف المفاهيم المعقدة من خلال الاستقصاء التعاوني والتجريب العملي والإرشاد المخصص من أعضاء هيئة التدريس.">
+                    We empower students to explore complex concepts through collaborative inquiry, practical experimentation, and dedicated faculty mentorship.
+                </p>
+                <a class="btn-dark" href="curriculum.html" data-en="Explore Cambridge Curriculum →" data-ar="استكشف منهج كامبريدج ←">Explore Cambridge Curriculum →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section dark-section">
+        <p class="kicker reveal-up" data-en="02 / CORE PILLARS" data-ar="02 / الركائز الأساسية">02 / CORE PILLARS</p>
+        <h2 class="content-heading reveal-up" data-en="Building strengths across <em>every discipline.</em>" data-ar="بناء نقاط القوة في <em>كل تخصص.</em>">Building strengths across <em>every discipline.</em></h2>
+        <div class="cards">
+            <article class="card dark-card reveal-up">
+                <span class="card-number">01</span>
+                <h3 data-en="STEM Excellence" data-ar="التميز في العلوم والرياضيات">STEM Excellence</h3>
+                <p data-en="Advanced mathematics, scientific inquiry, and technological literacy integrated into daily coursework." data-ar="الرياضيات المتقدمة والبحث العلمي والتقثين الرقمي مدمجة في المهام الدراسية اليومية.">Advanced mathematics, scientific inquiry, and technological literacy integrated into daily coursework.</p>
+            </article>
+            <article class="card dark-card reveal-up" style="transition-delay: 0.15s;">
+                <span class="card-number">02</span>
+                <h3 data-en="Humanities & Arts" data-ar="العلوم الإنسانية والفنون">Humanities & Arts</h3>
+                <p data-en="Cultivating global awareness, cultural appreciation, and creative expression through literature and social studies." data-ar="تنمية الوعي العالمي والتقدير الثقافي والتعبير الإبداعي من خلال الأدب والدراسات الاجتماعية.">Cultivating global awareness, cultural appreciation, and creative expression through literature and social studies.</p>
+            </article>
+            <article class="card dark-card reveal-up" style="transition-delay: 0.3s;">
+                <span class="card-number">03</span>
+                <h3 data-en="Bilingual Mastery" data-ar="التمكن ثنائي اللغة">Bilingual Mastery</h3>
+                <p data-en="Strong proficiency in both Arabic and English communication, anchoring students in their heritage while engaging globally." data-ar="الكفاءة القوية في التواصل باللغتين العربية والانجليزية، لترسيخ ارتباط الطلاب بتراثهم مع الانفتاح العالمي.">Strong proficiency in both Arabic and English communication, anchoring students in their heritage while engaging globally.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div>
+        <strong>ALASHBAL INTERNATIONAL SCHOOL</strong>
+        <p data-en="Young Achievers of Today, Global Leaders of Tomorrow." data-ar="منجزو اليوم، قادة الغد العالميون.">Young Achievers of Today, Global Leaders of Tomorrow.</p>
+    </div>
+    <div>
+        <strong>HOME OF THE CUBS</strong>
+        <p>© 2026 Alashbal International School</p>
+    </div>
+</footer>
+
+<div class="ai-chat-widget">
+    <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Open AIS Smart Assistant" title="AIS Smart Assistant">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg>
+    </button>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <div class="chat-title">
+                <strong>AIS Smart Assistant</strong>
+                <span data-en="Online • Admissions & School Info" data-ar="متصل • القبول والمعلومات">Online • Admissions & School Info</span>
+            </div>
+            <button class="chat-close-btn" id="chatCloseBtn">&times;</button>
+        </div>
+        <div class="chat-body">
+            <div class="suggested-chips-container" id="suggestedChips">
+                <span class="chips-label" data-en="Suggested Questions:" data-ar="أسئلة مقترحة:">Suggested Questions:</span>
+                <div class="chips-wrapper">
+                    <button class="chip-btn" data-query="How do I apply?">How do I apply?</button>
+                    <button class="chip-btn" data-query="Where can I find the curriculum?">Where can I find the curriculum?</button>
+                    <button class="chip-btn" data-query="How can I contact the school?">How can I contact the school?</button>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">Hello! I am your AIS Smart Assistant. Click any suggested question above or type your inquiry below!</div>
+            </div>
+        </div>
+        <form class="chat-input-area" id="chatForm">
+            <input type="text" id="chatInput" placeholder="Ask a question or write a message..." required autocomplete="off">
+            <button type="submit" class="chat-send-btn" data-en="Send" data-ar="إرسال">Send</button>
+        </form>
+        <button type="button" class="email-direct-btn" id="emailDirectBtn">✉ <span data-en="Email Directly to aischooldoha@gmail.com" data-ar="إرسال إيميل مباشر إلى المدرسة">Email Directly to aischooldoha@gmail.com</span></button>
+    </div>
+</div>
+
+<script>
+const menu = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-menu");
+if(menu) {
+    menu.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", open);
+    });
+}
+document.querySelectorAll(".nav-dropdown > a").forEach(link => {
+    link.addEventListener("click", event => {
+        if (window.innerWidth <= 850) {
+            const dropdown = link.parentElement;
+            if (!dropdown.classList.contains("open")) {
+                event.preventDefault();
+                dropdown.classList.toggle("open");
+            }
+        }
+    });
+});
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle.querySelector(".theme-icon");
+
+const currentTheme = localStorage.getItem("theme") || "light";
+if (currentTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeIcon.textContent = "☀️";
+}
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    themeIcon.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+const langToggle = document.getElementById("langToggle");
+
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    langToggle.textContent = lang === "ar" ? "English" : "العربية";
+
+    document.querySelectorAll("[data-en][data-ar]").forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) {
+            el.innerHTML = text;
+        }
+    });
+
+    localStorage.setItem("lang", lang);
+}
+
+const currentLang = localStorage.getItem("lang") || "en";
+setLanguage(currentLang);
+
+langToggle.addEventListener("click", () => {
+    const newLang = document.documentElement.lang === "en" ? "ar" : "en";
+    setLanguage(newLang);
+});
+
+const a11yToggleBtn = document.getElementById("a11yToggleBtn");
+const a11yCloseBtn = document.getElementById("a11yCloseBtn");
+const a11yPanel = document.getElementById("a11yPanel");
+
+a11yToggleBtn.addEventListener("click", () => {
+    const open = a11yPanel.hidden;
+    a11yPanel.hidden = !open;
+    a11yPanel.classList.toggle("open", open);
+});
+
+a11yCloseBtn.addEventListener("click", () => {
+    a11yPanel.classList.remove("open");
+    a11yPanel.hidden = true;
+});
+
+const textSizeSlider = document.getElementById("textSizeSlider");
+textSizeSlider.addEventListener("input", (e) => {
+    document.documentElement.style.fontSize = e.target.value + "%";
+});
+
+const contrastToggle = document.getElementById("contrastToggle");
+contrastToggle.addEventListener("change", (e) => {
+    document.body.classList.toggle("high-contrast", e.target.checked);
+});
+
+const motionToggle = document.getElementById("motionToggle");
+motionToggle.addEventListener("change", (e) => {
+    document.body.classList.toggle("reduce-motion", e.target.checked);
+});
+
+const srToggle = document.getElementById("srToggle");
+const voiceSelect = document.getElementById("voiceSelect");
+const speechSpeed = document.getElementById("speechSpeed");
+
+if ('speechSynthesis' in window) {
+    function loadVoices() {
+        const voices = window.speechSynthesis.getVoices();
+        voiceSelect.innerHTML = voices.map(v => `<option value="${v.name}">${v.name} (${v.lang})</option>`).join('');
+    }
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function speakText(text) {
+    if (!srToggle.checked || !('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = parseFloat(speechSpeed.value);
+
+    const voices = window.speechSynthesis.getVoices();
+    const selectedVoice = voices.find(v => v.name === voiceSelect.value);
+    if (selectedVoice) utterance.voice = selectedVoice;
+
+    window.speechSynthesis.speak(utterance);
+}
+
+srToggle.addEventListener("change", (e) => {
+    if (e.target.checked && 'speechSynthesis' in window) {
+        speakText("Screen reader enabled. Click any paragraph or heading to read it.");
+    } else {
+        window.speechSynthesis.cancel();
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (!srToggle.checked) return;
+    const target = e.target.closest("p, h1, h2, h3, h4, h5, h6, span, a");
+    if (target && !target.closest(".a11y-slide-panel") && !target.closest(".ai-chat-widget")) {
+        const textToRead = target.innerText.trim();
+        if (textToRead) {
+            speakText(textToRead);
+        }
+    }
+});
+
+const searchOpenBtn = document.getElementById("searchOpenBtn");
+const searchCloseBtn = document.getElementById("searchCloseBtn");
+const searchModal = document.getElementById("searchModal");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+
+const siteIndex = [
+    { title: "Admissions & Entry Requirements", url: "Admissions.html", category: "Admissions", keywords: "apply application registration fees documents enrollment requirements tour visit age" },
+    { title: "Cambridge International Curriculum", url: "curriculum.html", category: "Academics", keywords: "cambridge igcse subjects primary lower secondary pathway examinations qualifications study" },
+    { title: "Academics & Educational Pathways", url: "Academics.html", category: "Academics", keywords: "academics learning grades subjects teaching staff curriculum classrooms" },
+    { title: "About Our School & Mission", url: "about.html", category: "About AIS", keywords: "about history principal message vision mission pledge anti-bullying policy location campus" },
+    { title: "Our Core Values & Culture", url: "values.html", category: "About AIS", keywords: "values principles respect curiosity responsibility excellence school spirit" },
+    { title: "Leadership & Administration Team", url: "team.html", category: "Our Team", keywords: "leadership principal team staff administrators faculty teachers coordinators" },
+    { title: "Information for Parents & Calendar", url: "parents.html", category: "For Parents", keywords: "parents calendar events holidays portal health safety updates policy term dates" },
+    { title: "Contact Us & Location", url: "contact.html", category: "Contact", keywords: "contact address phone email map location hymm instagram facebook doha qatar" },
+    { title: "Student Hub & Portal", url: "studenthub.html", category: "Student Hub", keywords: "student hub portal timetable schedule study resources announcements clubs activities" }
+];
+
+function openSearch() {
+    searchModal.hidden = false;
+    searchModal.classList.add("open");
+    searchInput.focus();
+}
+
+function closeSearch() {
+    searchModal.classList.remove("open");
+    searchModal.hidden = true;
+    searchInput.value = "";
+    searchResults.innerHTML = '<p class="search-placeholder">Start typing to search across AIS pages...</p>';
+}
+
+searchOpenBtn.addEventListener("click", openSearch);
+searchCloseBtn.addEventListener("click", closeSearch);
+
+searchModal.addEventListener("click", (e) => {
+    if (e.target === searchModal) closeSearch();
+});
+
+document.addEventListener("keydown", (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        if (searchModal.hidden) openSearch(); else closeSearch();
+    }
+    if (e.key === "Escape" && !searchModal.hidden) closeSearch();
+});
+
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase().trim();
+    if (!query) {
+        searchResults.innerHTML = '<p class="search-placeholder">Start typing to search across AIS pages...</p>';
+        return;
+    }
+
+    const matches = siteIndex.filter(item => 
+        item.title.toLowerCase().includes(query) ||
+        item.category.toLowerCase().includes(query) ||
+        item.keywords.toLowerCase().includes(query)
+    );
+
+    if (matches.length === 0) {
+        searchResults.innerHTML = '<p class="search-no-results">No pages found matching your search.</p>';
+        return;
+    }
+
+    searchResults.innerHTML = matches.map(item => `
+        <a href="${item.url}" class="search-result-item">
+            <span class="search-result-cat">${item.category}</span>
+            <span class="search-result-title">${item.title}</span>
+        </a>
+    `).join("");
+});
+
+const chatToggleBtn = document.getElementById("chatToggleBtn");
+const chatCloseBtn = document.getElementById("chatCloseBtn");
+const chatBox = document.getElementById("chatBox");
+const chatForm = document.getElementById("chatForm");
+const chatInput = document.getElementById("chatInput");
+const chatMessages = document.getElementById("chatMessages");
+const emailDirectBtn = document.getElementById("emailDirectBtn");
+
+const schoolEmail = "aischooldoha@gmail.com";
+
+chatToggleBtn.addEventListener("click", () => {
+    chatBox.classList.toggle("open");
+});
+
+chatCloseBtn.addEventListener("click", () => {
+    chatBox.classList.remove("open");
+});
+
+function appendMessage(htmlContent, sender) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("message", sender === "user" ? "user-message" : "bot-message");
+    msgDiv.innerHTML = htmlContent;
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function openMailClient(bodyText) {
+    const subject = encodeURIComponent("Inquiry via AIS Smart Assistant");
+    const body = encodeURIComponent(bodyText);
+    window.location.href = `mailto:${schoolEmail}?subject=${subject}&body=${body}`;
+}
+
+emailDirectBtn.addEventListener("click", () => {
+    openMailClient("Hello AIS Administration,\n\nI would like to inquire about...");
+});
+
+function processUserQuery(userText) {
+    appendMessage(userText, "user");
+    const lower = userText.toLowerCase();
+
+    const typingDiv = document.createElement("div");
+    typingDiv.classList.add("message", "bot-message", "typing-msg");
+    typingDiv.innerHTML = "<em>AIS Assistant is typing...</em>";
+    chatMessages.appendChild(typingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    setTimeout(() => {
+        typingDiv.remove();
+
+        if (lower.includes("apply") || lower.includes("admission") || lower.includes("enroll") || lower.includes("register")) {
+            appendMessage(`You can apply online by visiting our Admissions section or scheduling a campus tour.<br><br><a href="Admissions.html" class="chat-link-btn">Go to Admissions Page →</a>`, "bot");
+        } 
+        else if (lower.includes("curriculum") || lower.includes("cambridge") || lower.includes("subject") || lower.includes("study")) {
+            appendMessage(`We follow the Cambridge International Curriculum from primary through secondary levels.<br><br><a href="curriculum.html" class="chat-link-btn">View Cambridge Curriculum →</a>`, "bot");
+        } 
+        else if (lower.includes("contact") || lower.includes("location") || lower.includes("where") || lower.includes("phone") || lower.includes("address")) {
+            appendMessage(`AIS is located in the Old Airport Area along E-ring Road, Doha, Qatar. You can reach us at <strong>aischooldoha@gmail.com</strong>.<br><br><a href="contact.html" class="chat-link-btn">Open Contact & Map →</a>`, "bot");
+        } 
+        else if (lower.includes("term") || lower.includes("date") || lower.includes("calendar") || lower.includes("holiday") || lower.includes("exam")) {
+            appendMessage(`You can view our complete <strong>Academic Calendar AY 2026–2027</strong> on the For Parents page.<br><br><a href="parents.html" class="chat-link-btn">View Term Dates & Calendar →</a>`, "bot");
+        } 
+        else if (lower.includes("student") || lower.includes("hub") || lower.includes("portal")) {
+            appendMessage(`The Student Hub provides access to timetables, learning materials, and announcements.<br><br><a href="studenthub.html" class="chat-link-btn">Open Student Hub →</a>`, "bot");
+        } 
+        else {
+            appendMessage(`Thank you for your question! Would you like me to send this query directly to our admissions team at <strong>aischooldoha@gmail.com</strong>?`, "bot");
+            
+            const actionBtn = document.createElement("button");
+            actionBtn.classList.add("chat-action-btn");
+            actionBtn.innerHTML = "✉ Draft Email to AIS";
+            actionBtn.onclick = () => openMailClient(userText);
+            chatMessages.appendChild(actionBtn);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    }, 500);
+}
+
+document.querySelectorAll(".chip-btn").forEach(chip => {
+    chip.addEventListener("click", () => {
+        const query = chip.getAttribute("data-query");
+        processUserQuery(query);
+    });
+});
+
+chatForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const userText = chatInput.value.trim();
+    if (!userText) return;
+    chatInput.value = "";
+    processUserQuery(userText);
+});
+
+const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -30px 0px"
+});
+revealElements.forEach(el => {
+    revealObserver.observe(el);
+});
+</script>
+</body>
+</html>
