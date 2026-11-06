@@ -1,0 +1,257 @@
+/* ================= MODEL UNITED NATIONS (MUN) CLUB CSS ================= */
+
+.svlc-hero {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
+}
+
+.svlc-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.svlc-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.1);
+}
+
+.svlc-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(35, 9, 17, 0.75) 0%, rgba(20, 5, 10, 0.88) 100%);
+    z-index: 2;
+}
+
+.svlc-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 80px 20px;
+}
+
+.svlc-hero .eyebrow {
+    font-size: 11px;
+    letter-spacing: .22em;
+    color: #d9b59d;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    animation: heroFadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.svlc-hero h1 {
+    font: 500 clamp(3rem, 7vw, 6rem) / 1.05 "Playfair Display", serif;
+    animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.svlc-hero h1 em {
+    font-style: italic;
+    color: #d9b59d;
+}
+
+/* ================= CONTENT SECTIONS & DARK MODE OVERRIDES ================= */
+
+/* Light mode base styling for headings */
+.content-heading,
+.content-heading span {
+    color: #3a0d18;
+}
+
+.content-heading em {
+    color: #681d2c;
+    font-style: italic;
+}
+
+/* Dark mode styling for page sections & background colors */
+body.dark-mode .visual-bg-light,
+body.dark-mode .visual-bg-accent {
+    background-color: #14070a !important;
+    background-image: 
+        radial-gradient(circle at 10% 10%, rgba(104, 29, 44, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(217, 181, 157, 0.08) 0%, transparent 45%),
+        radial-gradient(#381620 1.2px, transparent 1.2px) !important;
+    color: #f1ece9 !important;
+}
+
+body.dark-mode .content-heading,
+body.dark-mode .content-heading span {
+    color: #f1ece9 !important;
+}
+
+body.dark-mode .content-heading em {
+    color: #d9b59d !important;
+}
+
+body.dark-mode .kicker {
+    color: #d9b59d !important;
+}
+
+body.dark-mode .body-copy {
+    color: #c9bcba !important;
+}
+
+/* ================= HIGHLIGHT CARD & OBJECTIVES ================= */
+
+.svlc-highlight-card {
+    background: #ffffff;
+    border: 1px solid #e4dad5;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+body.dark-mode .svlc-highlight-card {
+    background: #1c0a10;
+    border-color: #381620;
+}
+
+.svlc-highlight-card h3 {
+    font: 600 22px "Playfair Display", serif;
+    color: #3a0d18;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .svlc-highlight-card h3 {
+    color: #d9b59d;
+}
+
+.svlc-highlight-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.svlc-highlight-card ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    color: #524749;
+    line-height: 1.5;
+}
+
+[dir="rtl"] .svlc-highlight-card ul li {
+    padding-left: 0;
+    padding-right: 24px;
+}
+
+.svlc-highlight-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #681d2c;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+}
+
+[dir="rtl"] .svlc-highlight-card ul li::before {
+    left: auto;
+    right: 0;
+}
+
+body.dark-mode .svlc-highlight-card ul li {
+    color: #c9bcba;
+}
+
+/* ================= CARDS GRID ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: #ffffff;
+    color: #251218;
+    padding: 35px;
+    min-height: 260px;
+    border: 1px solid #e4dad5;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .card {
+    background: #1c0a10;
+    border-color: #381620;
+    color: #f1ece9;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.card-number {
+    font-size: 11px;
+    color: #681d2c;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .card-number {
+    color: #d9b59d;
+}
+
+.card h3 {
+    font: 600 22px/1.2 "Playfair Display", serif;
+    color: #3a0d18;
+    margin-bottom: 12px;
+}
+
+body.dark-mode .card h3 {
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 13px;
+    color: #524749;
+    line-height: 1.6;
+}
+
+body.dark-mode .card p {
+    color: #c9bcba;
+}
+
+/* ================= ANIMATIONS & RESPONSIVE ================= */
+
+@keyframes heroFadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 850px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
